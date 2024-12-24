@@ -5,14 +5,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.myjar.jarassignment.R
 import com.myjar.jarassignment.data.model.ComputerItem
 
 class ItemAdapter(
     private val onItemClick: (ComputerItem) -> Unit
-) : ListAdapter<ComputerItem, ItemAdapter.ItemViewHolder>(ItemDiffCallback()) {
+) : androidx.recyclerview.widget.ListAdapter<ComputerItem, ItemAdapter.ItemViewHolder>(ItemDiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
         val view = LayoutInflater.from(parent.context)
